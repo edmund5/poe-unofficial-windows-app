@@ -5,7 +5,7 @@ A clean Poe.com for Windows.
 
 ## Credits
 
-![Chromium Embedded Framework (CEF)](https://github.com/salvadordf/CEF4Delphi) by Salvador Díaz Fau
+[Chromium Embedded Framework (CEF)](https://github.com/salvadordf/CEF4Delphi) by Salvador Díaz Fau
 
 ## Disclaimer
 
@@ -16,7 +16,7 @@ Version 1.9.25
 - Chromium-based browsers
 - Compatible with Windows 10 & 11
 
-![Download](https://edmundcinco.com/projects/poe-unofficial/poe-unofficial-v1.9.25.zip)
+[Download](https://edmundcinco.com/projects/poe-unofficial/poe-unofficial-v1.9.25.zip)
 
 ## License
 
