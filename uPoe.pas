@@ -89,7 +89,7 @@ end;
 procedure TForm1.Exit1Click(Sender: TObject);
 var CanClose: Boolean;
 begin
-  CanClose := True; // Initialize the variable
+  CanClose := True;
   FormCloseQuery(Self, CanClose);
   Application.Terminate;
 end;

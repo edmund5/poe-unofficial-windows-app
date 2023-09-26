@@ -93,11 +93,10 @@
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <Icon_MainIcon>Poe_Icon.ico</Icon_MainIcon>
         <VerInfo_MinorVer>9</VerInfo_MinorVer>
-        <VerInfo_Release>25</VerInfo_Release>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.9.25.0;InternalName=Poe - Unofficial;LegalCopyright=;LegalTrademarks=;OriginalFilename=Poe.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.9.25.0;Comments=</VerInfo_Keys>
-        <UWP_DelphiLogo44>assets\Poe_44.png</UWP_DelphiLogo44>
-        <UWP_DelphiLogo150>assets\Poe_150.png</UWP_DelphiLogo150>
-        <VerInfo_PreRelease>true</VerInfo_PreRelease>
+        <VerInfo_Release>26</VerInfo_Release>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.9.26.0;InternalName=Poe - Unofficial;LegalCopyright=;LegalTrademarks=;OriginalFilename=Poe.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.9.26.0;Comments=</VerInfo_Keys>
+        <UWP_DelphiLogo44>assets\Poe_44x44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>assets\Poe_150x150.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -137,6 +136,12 @@
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_MinorVer>9</VerInfo_MinorVer>
+        <VerInfo_Release>26</VerInfo_Release>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.9.26.0;InternalName=Poe - Unofficial;LegalCopyright=;LegalTrademarks=;OriginalFilename=Poe.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.9.26.0;Comments=</VerInfo_Keys>
+        <Icon_MainIcon>Poe_Icon.ico</Icon_MainIcon>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -185,9 +190,10 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Win64\Debug\Poe.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="assets\Poe_150.png" Configuration="Debug" Class="UWP_DelphiLogo150">
                     <Platform Name="Win64">
-                        <RemoteName>Poe.exe</RemoteName>
+                        <RemoteDir>Assets\</RemoteDir>
+                        <RemoteName>Logo150x150.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -197,16 +203,29 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="assets\Poe_150.png" Configuration="Debug" Class="UWP_DelphiLogo150">
+                <DeployFile LocalName="Win64\Debug\Poe.rsm" Configuration="Debug" Class="DebugSymbols">
+                    <Platform Name="Win64">
+                        <RemoteName>Poe.rsm</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win64\Debug\Poe.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win64">
+                        <RemoteName>Poe.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="assets\Poe_150x150.png" Configuration="Release" Class="UWP_DelphiLogo150">
                     <Platform Name="Win64">
                         <RemoteDir>Assets\</RemoteDir>
                         <RemoteName>Logo150x150.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Win64\Debug\Poe.rsm" Configuration="Debug" Class="DebugSymbols">
+                <DeployFile LocalName="assets\Poe_44x44.png" Configuration="Release" Class="UWP_DelphiLogo44">
                     <Platform Name="Win64">
-                        <RemoteName>Poe.rsm</RemoteName>
+                        <RemoteDir>Assets\</RemoteDir>
+                        <RemoteName>Logo44x44.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
