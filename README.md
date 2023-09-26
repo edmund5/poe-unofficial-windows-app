@@ -3,6 +3,12 @@ A clean Poe.com for Windows.
 
 ![image](https://github.com/edmund5/poe-unofficial-windows-app/assets/299803/8b467c7f-4254-49cf-a1c2-fc60a0c4b7b1)
 
+Version 1.9.26
+- UI Updated
+- Small Bug Fixes
+
+[Download](https://edmundcinco.com/projects/poe-unofficial/poe-unofficial-v1.9.26.zip)
+
 Version 1.9.25
 - Initial release
 - Chromium-based browsers
