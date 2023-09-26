@@ -1,7 +1,7 @@
 # Poe - Unofficial Windows App
 A clean Poe.com for Windows.
 
-![image](https://github.com/edmund5/poe-unofficial-windows-app/assets/299803/8b467c7f-4254-49cf-a1c2-fc60a0c4b7b1)
+![image](https://github.com/edmund5/poe-unofficial-windows-app/assets/299803/89ea5c9b-af02-4f08-b5f8-cefa41f61500)
 
 Version 1.9.26
 - UI Updated
