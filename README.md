@@ -1,7 +1,12 @@
 # Poe - Unofficial Windows App
 A clean Poe.com for Windows.
 
-![image](https://github.com/edmund5/poe-unofficial-windows-app/assets/299803/89ea5c9b-af02-4f08-b5f8-cefa41f61500)
+![image](https://github.com/edmund5/poe-unofficial-windows-app/assets/299803/3d46224e-2dc7-4877-a378-c9bdd066ee30)
+
+Version 1.9.27
+- Added: Hide/Show Menu
+
+[Download](https://edmundcinco.com/projects/poe-unofficial/poe-unofficial-v1.9.27.zip)
 
 Version 1.9.26
 - UI Updated
