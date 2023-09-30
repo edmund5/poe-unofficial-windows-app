@@ -93,8 +93,8 @@
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <Icon_MainIcon>Poe_Icon.ico</Icon_MainIcon>
         <VerInfo_MinorVer>9</VerInfo_MinorVer>
-        <VerInfo_Release>26</VerInfo_Release>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.9.26.0;InternalName=Poe - Unofficial;LegalCopyright=;LegalTrademarks=;OriginalFilename=Poe.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.9.26.0;Comments=</VerInfo_Keys>
+        <VerInfo_Release>27</VerInfo_Release>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.9.27.0;InternalName=Poe - Unofficial;LegalCopyright=;LegalTrademarks=;OriginalFilename=Poe.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.9.27.0;Comments=</VerInfo_Keys>
         <UWP_DelphiLogo44>assets\Poe_44x44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>assets\Poe_150x150.png</UWP_DelphiLogo150>
     </PropertyGroup>
@@ -138,9 +138,9 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_MinorVer>9</VerInfo_MinorVer>
-        <VerInfo_Release>26</VerInfo_Release>
+        <VerInfo_Release>27</VerInfo_Release>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.9.26.0;InternalName=Poe - Unofficial;LegalCopyright=;LegalTrademarks=;OriginalFilename=Poe.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.9.26.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.9.27.0;InternalName=Poe - Unofficial;LegalCopyright=;LegalTrademarks=;OriginalFilename=Poe.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.9.27.0;Comments=</VerInfo_Keys>
         <Icon_MainIcon>Poe_Icon.ico</Icon_MainIcon>
     </PropertyGroup>
     <ItemGroup>

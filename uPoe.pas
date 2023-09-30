@@ -3,9 +3,24 @@ unit uPoe;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, uCEFWinControl,
-  uCEFLinkedWinControlBase, uCEFChromiumWindow, Vcl.ExtCtrls;
+  System.Classes,
+  System.IniFiles,
+  System.SysUtils,
+  System.Variants,
+  uCEFChromium,
+  uCEFChromiumCore,
+  uCEFChromiumWindow,
+  uCEFInterfaces,
+  uCEFLinkedWinControlBase,
+  uCEFWinControl,
+  Vcl.Controls,
+  Vcl.Dialogs,
+  Vcl.ExtCtrls,
+  Vcl.Forms,
+  Vcl.Graphics,
+  Vcl.Menus,
+  Winapi.Messages,
+  Winapi.Windows;
 
 type
   TForm1 = class(TForm)
@@ -16,15 +31,22 @@ type
     Exit1: TMenuItem;
     ChromiumWindow1: TChromiumWindow;
     Timer1: TTimer;
+    Customize1: TMenuItem;
+    HideMenu1: TMenuItem;
+    Chromium1: TChromium;
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure About1Click(Sender: TObject);
     procedure Exit1Click(Sender: TObject);
+    procedure HideMenu1Click(Sender: TObject);
     procedure ChromiumWindow1AfterCreated(Sender: TObject);
     procedure ChromiumWindow1Close(Sender: TObject);
   private
+    FIsMenuVisible: Boolean;
+    procedure ExecuteJavaScript(const JSCode: string);
+    procedure ToggleSidebarVisibility;
     procedure WMMove(var aMessage : TWMMove); message WM_MOVE;
     procedure WMMoving(var aMessage : TMessage); message WM_MOVING;
     procedure WMEnterMenuLoop(var aMessage: TMessage); message WM_ENTERMENULOOP;
@@ -46,6 +68,33 @@ implementation
 uses
   uCEFApplication, uAbout;
 
+procedure TForm1.ExecuteJavaScript(const JSCode: string);
+begin
+  if ChromiumWindow1.ChromiumBrowser.Initialized and
+     (ChromiumWindow1.ChromiumBrowser.Browser <> nil) then
+      ChromiumWindow1.ChromiumBrowser.Browser.MainFrame.ExecuteJavaScript(JSCode, '', 0);
+end;
+
+procedure TForm1.ToggleSidebarVisibility;
+var
+  JSCode: string;
+begin
+  if FIsMenuVisible then
+  begin
+    JSCode := 'document.querySelector(".SidebarLayout_sidebar__SXeDJ").style.display = "none";';
+    HideMenu1.Caption := 'Show Menu';
+  end
+  else
+  begin
+    JSCode := 'document.querySelector(".SidebarLayout_sidebar__SXeDJ").style.display = "block";';
+    HideMenu1.Caption := 'Hide Menu';
+  end;
+
+  ExecuteJavaScript(JSCode);
+
+  FIsMenuVisible := not FIsMenuVisible;
+end;
+
 procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   CanClose := FCanClose;
@@ -60,6 +109,8 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
+  FIsMenuVisible := True;
+
   FCanClose := False;
   FClosing  := False;
 
@@ -92,6 +143,11 @@ begin
   CanClose := True;
   FormCloseQuery(Self, CanClose);
   Application.Terminate;
+end;
+
+procedure TForm1.HideMenu1Click(Sender: TObject);
+begin
+  ToggleSidebarVisibility;
 end;
 
 procedure TForm1.ChromiumWindow1AfterCreated(Sender: TObject);

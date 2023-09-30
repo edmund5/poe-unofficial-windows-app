@@ -44,12 +44,23 @@ object Form1: TForm1
         OnClick = Exit1Click
       end
     end
+    object Customize1: TMenuItem
+      Caption = 'Customize'
+      object HideMenu1: TMenuItem
+        Caption = 'Hide Menu'
+        OnClick = HideMenu1Click
+      end
+    end
   end
   object Timer1: TTimer
     Enabled = False
     Interval = 100
     OnTimer = Timer1Timer
     Left = 88
+    Top = 16
+  end
+  object Chromium1: TChromium
+    Left = 144
     Top = 16
   end
 end

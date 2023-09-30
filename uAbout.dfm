@@ -5,7 +5,7 @@ object Form2: TForm2
   BorderStyle = bsSingle
   Caption = 'Form2'
   ClientHeight = 209
-  ClientWidth = 219
+  ClientWidth = 221
   Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -2128,6 +2128,6 @@ object Form2: TForm2
     Top = 179
     Width = 70
     Height = 13
-    Caption = 'Version 1.9.26'
+    Caption = 'Version 1.9.27'
   end
 end
